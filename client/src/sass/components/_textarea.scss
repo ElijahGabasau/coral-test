@@ -1,0 +1,17 @@
+.textarea {
+  &__field {
+    display: grid;
+    position: relative;
+    grid-template-rows: min-content 15rem;
+    row-gap: 1rem;
+  }
+
+  &__label {
+    @extend .t--caps;
+
+    &--comment {
+      line-height: 1.4;
+      font-size: 1.4rem;
+    }
+  }
+}

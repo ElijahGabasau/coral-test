@@ -1,0 +1,18 @@
+.captcha {
+  &__input {
+    display: grid;
+    row-gap: 0.7rem;
+  }
+
+  &__field {
+    @extend .input__field;
+  }
+
+  &__label {
+    @extend .input__label;
+  }
+
+  &__comment {
+    font-size: 1.3rem;
+  }
+}

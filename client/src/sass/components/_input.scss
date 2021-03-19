@@ -1,0 +1,14 @@
+.input {
+  &__field {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 20rem;
+    column-gap: 2rem;
+  }
+
+  &__label {
+    @extend .t--caps;
+
+    justify-self: end;
+  }
+}

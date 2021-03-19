@@ -1,0 +1,13 @@
+.header {
+  font-weight: 500;
+  line-height: 2.8rem;
+
+  &__title {
+    text-transform: capitalize;
+    font-weight: inherit;
+  }
+
+  &__subtitle {
+    font-weight: inherit;
+  }
+}

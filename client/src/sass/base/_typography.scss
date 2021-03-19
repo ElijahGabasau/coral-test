@@ -1,0 +1,49 @@
+body,
+input,
+textarea,
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.input,
+.textarea {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.t {
+  &--thin {
+    font-weight: 300;
+  }
+
+  &--semibold {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 800;
+  }
+
+  &--caps {
+    text-transform: uppercase;
+  }
+
+  &--cpz {
+    text-transform: capitalize;
+  }
+}
+
+.a {
+  color: inherit;
+}
+
+.p {
+  font-size: 1.4rem;
+}

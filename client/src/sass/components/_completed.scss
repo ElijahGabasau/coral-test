@@ -1,0 +1,17 @@
+.completed {
+  @extend .u-margin-center;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: min-content;
+  align-items: center;
+
+  &__figure {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__title {
+    @extend .t--semibold;
+  }
+}

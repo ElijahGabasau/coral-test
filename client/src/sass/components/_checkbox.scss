@@ -1,0 +1,15 @@
+.checkbox {
+  &__field {
+    position: relative;
+  }
+
+  &__container {
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+
+  &__label {
+    @extend .t--caps;
+    padding-left: 1rem;
+  }
+}

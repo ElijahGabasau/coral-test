@@ -1,0 +1,39 @@
+.app {
+  @extend .u-margin-center;
+  @extend .u-margin-top-sm;
+
+  min-height: 95vh;
+  width: 75%;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 6rem 1fr 6rem;
+  grid-template-areas:
+    'head head'
+    'aside form'
+    'link .';
+  row-gap: 2rem;
+
+  &__header {
+    grid-area: head / head;
+  }
+
+  &__aside {
+    grid-area: aside / aside;
+  }
+
+  &__form {
+    grid-area: form / form;
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:active {
+    grid-area: link / link;
+
+    outline: initial;
+    color: rgba($color-primary, 0.8);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+}

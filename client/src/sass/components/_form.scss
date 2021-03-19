@@ -1,0 +1,101 @@
+.form {
+  padding-top: 5rem;
+  display: grid;
+  row-gap: 1.5rem;
+  height: 100%;
+
+  &--contact {
+    grid-auto-flow: column;
+    justify-items: end;
+    grid-auto-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, min-content);
+  }
+
+  &--areas {
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--password,
+  &--address {
+    width: 65%;
+    grid-template-rows: repeat(6, min-content);
+    justify-items: end;
+  }
+
+  &__input {
+    border: 1px solid rgba($color-primary, 0.3);
+    padding: 0.5rem;
+
+    &--invalid {
+      background-color: rgba($color-secondary, 0.2);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    font-size: 1.4rem;
+    min-width: 35rem;
+    padding: 1rem;
+
+    &--invalid {
+      background-color: rgba($color-secondary, 0.2);
+    }
+  }
+
+  &__invalid-sign {
+    @extend .u-flex-center;
+    @extend .u-sign;
+    cursor: pointer;
+
+    background-color: $color-secondary;
+
+    position: absolute;
+    z-index: 10;
+    right: -3rem;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &__invalid-message {
+    position: hidden;
+    opacity: 0;
+    display: none;
+
+    font-size: 1.4rem;
+
+    min-width: 20rem;
+    min-height: 10rem;
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background-color: rgba($color-white, 0.95);
+    box-shadow: 0.2rem 0.2rem 1rem rgba($color-black, 0.3);
+
+    z-index: 100;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(5%);
+
+    transition: 0.3s ease-in-out;
+
+    *:nth-child(2) {
+      padding-top: 0.5rem;
+      border-top: 0.1rem solid rgba($color-grey-1, 0.3);
+    }
+  }
+
+  &__invalid-sign:hover + &__invalid-message {
+    position: absolute;
+    display: block;
+    opacity: 1;
+  }
+
+  &__button-bar {
+    display: grid;
+    justify-content: end;
+    align-items: end;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 2rem;
+  }
+}
